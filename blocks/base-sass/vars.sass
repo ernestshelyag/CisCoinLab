@@ -1,0 +1,25 @@
+// colors
+
+$bg-color: #1B2E32
+$main-color: #23e5e0
+$main-color-darker: #0da5ce
+$main-color-gray: #8C9698
+
+// fonts
+
+=michroma
+  font-family: 'Michroma', sans-serif
+
+=font-face($font-family, $file-path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $font-family
+    src: url('#{$file-path}.woff') format('woff'),  url('#{$file-path}.ttf') format('truetype')
+    font-weight: $weight
+    font-style: $style
+
++font-face('Gotham', '../fonts/GothamProLight', 300)
++font-face('Gotham', '../fonts/GothamProRegular', 400)
+
+
+
+

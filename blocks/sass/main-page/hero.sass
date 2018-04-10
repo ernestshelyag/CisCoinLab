@@ -1,0 +1,190 @@
+.crc-all
+  display: block
+  height: 100%
+  position: relative
+  +r(680)
+    display: none
+
+.hero
+  &__item
+    +flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    width: 100vw
+    height: 70vh
+    padding-top: 5vh
+    &_2-nd
+      justify-content: space-around
+      svg
+        width: 490px
+        height: 300px
+    +r(860)
+      height: 65vh
+  &__info-block
+    margin-top: 5vh
+  &__img-block
+    position: relative
+    width: 52vh
+    height: 52vh
+  &__map-img
+    padding-top: 12vh
+    z-index: 2
+    +r(680)
+      width: 50vh
+      height: auto
+  &__medal-img
+    width: 100%
+    height: auto
+    z-index: 2
+    margin: 0
+    +r(680)
+      display: none
+    &_hidden
+      display: none
+      width: 40vh
+      height: 40vh
+      +vcenter
+      +r(680)
+        display: block
+  &__nums-img
+    width: 45vh
+    position: absolute
+    +pos()
+    will-change: transrorm
+    animation: crc-rotate 80s linear infinite
+    +r(680)
+      display: none
+
+
+  &__circles-block
+    z-index: 1
+    +vcenter
+    width: 52vh
+    height: 52vh
+  &__crc1, &__crc2, &__crc3, &__crc4
+    &:before, &:after
+      will-change: transrorm
+      position: absolute
+      content: ''
+      border-radius: 50%
+  &__crc1
+    &:before
+      +pos-custom()
+      border: solid 5px transparent
+      border-top: solid 5px rgba(255,255,255,.3)
+      border-left: solid 5px rgba(255,255,255,.3)
+      animation: crc-rotate 30s linear infinite
+      //animation-delay: 7s
+    &:after
+      +pos-custom(10)
+      border: solid 3px transparent
+      border-bottom: solid 3px rgba(255,255,255,.5)
+      border-left: solid 3px rgba(255,255,255,.5)
+      border-right: solid 3px rgba(255,255,255,.5)
+      animation: crc-rotate 50s infinite
+      //animation-delay: 5s
+  &__crc2
+    &:before
+      +pos-custom(20)
+      border: solid 5px transparent
+      border-top: solid 5px rgba(255,255,255,.3)
+      border-right: solid 5px rgba(255,255,255,.3)
+      animation: crc-rotate-rev 30s linear infinite
+      //animation-delay: 3s
+    &:after
+      +pos-custom(30)
+      border: solid 7px transparent
+      border-bottom: solid 7px rgba(255,255,255,.5)
+      animation: crc-rotate 20s infinite
+  &__crc3
+    &:before
+      +pos-custom(100)
+      border: solid 5px transparent
+      border-top: solid 5px rgba(255,255,255,.3)
+      border-left: solid 5px rgba(255,255,255,.3)
+      animation: crc-rotate 30s linear infinite
+      //animation-delay: 7s
+    &:after
+      +pos-custom(90)
+      border: solid 10px transparent
+      border-bottom: solid 10px rgba(255,255,255,.5)
+      animation: crc-rotate-rev 50s infinite
+      //animation-delay: 5s
+  &__crc4
+    &:before
+      +pos-custom(110)
+      border: solid 5px transparent
+      border-right: solid 5px rgba(255,255,255,.3)
+      animation: crc-rotate-rev 30s linear infinite
+      //animation-delay: 3s
+    &:after
+      +pos-custom(110)
+      border: solid 2px transparent
+      border-bottom: solid 2px rgba(255,255,255,.5)
+      border-top: solid 2px rgba(255,255,255,.5)
+      animation: crc-rotate 20s infinite
+  &__text
+    display: inline-block
+    font-size: 20px
+    padding-top: 20px
+    +r(680)
+      font-size: 16px
+      padding: 10px 20px 0
+    &_3-rd
+      text-transform: uppercase
+      color: $main-color
+      font-size: 20px
+      letter-spacing: 1px
+
+  &__ind-graph-block
+    flex-grow: 1
+    width: 700px
+    position: relative
+    max-width: 615px
+    +r(860)
+      display: none
+    +rh(900)
+      display: none
+  &__ind-info-block
+    margin-top: 30px
+    +r(860)
+      margin-top: 0
+      +vcenter
+    +rh(900)
+      margin-top: 0
+      +vcenter
+  &__ind-val-block
+    span
+      padding-left: 15px
+  &__ind-text
+    font-size: 20px
+    margin-top: 30px
+    text-transform: uppercase
+    color: $main-color
+    display: block
+    +r(860)
+      font-size: 16px
+  &__can-ind-graph
+    position: absolute
+    top: -34px
+    bottom: 0
+    left: -8px
+    right: 0
+    margin: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

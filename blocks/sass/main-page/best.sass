@@ -1,0 +1,30 @@
+.best
+  &__item
+    +flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    +vcenter
+    width: 70vw
+    height: 60vh
+    justify-content: space-around
+    +r(680)
+      top: 40%
+    svg
+      width: 490px
+      height: 300px
+      +r(680)
+        width: 70vw
+        height: auto
+
+  &__title
+    text-transform: uppercase
+    color: $main-color
+    font-size: 25px
+    +r(680)
+      font-size: 20px
+  &__text
+    max-width: 600px
+    font-size: 20px
+    +r(680)
+      font-size: 16px

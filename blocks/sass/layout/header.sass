@@ -1,0 +1,259 @@
+.header
+
+  .wrp
+    +flex
+    +r(860)
+      align-items: center
+
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 20
+  height: 10vh
+  padding-top: 5vh
+
+  +r(860)
+    padding-top: 2vh
+  +r(680)
+    height: 7vh
+    padding-top: 0
+  &__logo-img
+    width: 97px
+    height: 105px
+    +r(1140)
+      margin-top: -20px
+    +r(860)
+      width: 60px
+      height: auto
+      margin-top: 10px
+  &__block
+    &_hidden
+      display: none
+      +r(680)
+        display: block!important
+    +r(680)
+      display: none
+    &:first-child
+      +r(680)
+        display: block
+    &:nth-child(2)
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%, 0)
+      +r(1140)
+        position: relative
+        transform: none
+        left: auto
+    &:nth-child(3)
+      +flex
+      align-items: flex-start
+      width: 367px
+      +r(1560)
+        width: auto
+      +r(680)
+        display: none
+  &__nav
+    +flex
+    width: 555px
+    +r(1630)
+      width: auto
+  &__link
+    padding: 0 30px
+    +r(860)
+      padding: 0 20px
+  &__link, &__personal
+    +tr
+    &:hover
+      color: $main-color
+      animation: color 3s infinite
+      &:before, &:after
+        opacity: 1
+      &:before
+        animation: link1 3s infinite
+      &:after
+        animation: link2 3s infinite
+    +psevdo
+    &:before, &:after
+      opacity: 0
+      +tr
+      right: 0
+      left: 0
+      top: -17px
+      margin: auto
+    &:before
+      height: 20px
+      border-top: solid 1px $main-color-darker
+      border-left: solid 1px $main-color-darker
+      border-right: solid 1px $main-color-darker
+    &:after
+      width: 1px
+      height: 7px
+      background: $main-color-darker
+  &__personal
+    padding: 0 20px 0 35px
+    position: relative
+    +r(1560)
+      margin-right: 12px
+    +r(860)
+      padding: 0
+  &__per-img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 10px
+    margin: auto
+    width: 20px
+    height: 22px
+    +r(860)
+      display: none
+  &__per-text
+    padding: 0 0 0 15px
+    +r(860)
+      padding: 16px 10px 0
+      display: block
+  &__lang-block
+    position: relative
+    &:before
+      left: 0
+      top: 0
+      position: fixed
+      width: 100vw
+      height: 100vh
+      content: ''
+      z-index: 30
+      display: none
+    &.active
+      &:before
+        display: block
+      .header__mask
+        background: transparent
+      .header__lang-menu
+        opacity: 1
+        visibility: visible
+        z-index: 50
+        top: 50px
+  &__lang-btn
+    padding-right: 20px
+    cursor: pointer
+    +psevdo
+    &:before
+      top: 0
+      bottom: 5px
+      right: 0
+      margin: auto
+      width: 10px
+      height: 10px
+      border-right: solid 1px #fff
+      border-bottom: solid 1px #fff
+      transform: rotate(45deg)
+    &:hover
+      span
+        background: transparent
+    +r(860)
+      padding-right: 0
+      &:before
+        display: none
+  &__mask
+    background: rgba(27,46,50,.3)
+    +pos(0,20)
+    +tr
+    +r(860)
+      right: 0
+
+  &__menu-btn
+    padding-right: 40px
+    position: relative
+    cursor: pointer
+    &:before
+      content: ''
+      +pos()
+      left: auto
+      width: 30px
+      height: 15px
+      border-top: solid 2px $main-color-darker
+      border-bottom: solid 2px $main-color-darker
+    &:after
+      content: ''
+      +pos()
+      left: auto
+      width: 30px
+      height: 2px
+      background: $main-color-darker
+
+  &__hidden-list-block
+    position: fixed
+    left: 0
+    top: -100vh
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,.95)
+    opacity: 0
+    transition: all .6s
+    &.active
+      top: 0
+      opacity: 1
+
+  &__close-btn
+    position: absolute
+    top: 2vh
+    right: 2vh
+    width: 30px
+    height: 30px
+    cursor: pointer
+    &:before, &:after
+      +pos()
+      content: ''
+      position: absolute
+      border-top: solid 2px $main-color-darker
+      top: 19px
+      width: 30px
+      height: 30px
+    &:before
+      transform: rotate(45deg)
+      left: -20px
+    &:after
+      transform: rotate(-45deg)
+      left: 9px
+
+  &__lang-menu
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    visibility: hidden
+    opacity: 0
+    +tr
+  &__lang-link
+    padding: 10px 0
+    z-index: 100
+    position: relative
+
+.hidden-list
+  display: flex
+  justify-content: space-around
+  flex-direction: column
+  align-items: center
+  height: 100%
+
+@keyframes link1
+  from
+    border-top: solid 1px $main-color-darker
+    border-left: solid 1px $main-color-darker
+    border-right: solid 1px $main-color-darker
+  50%
+    border-top: solid 1px $main-color
+    border-left: solid 1px $main-color
+    border-right: solid 1px $main-color
+  to
+    border-top: solid 1px $main-color-darker
+    border-left: solid 1px $main-color-darker
+    border-right: solid 1px $main-color-darker
+@keyframes link2
+  from
+    background: $main-color-darker
+  50%
+    background: $main-color
+  to
+    background: $main-color-darker

@@ -1,0 +1,327 @@
+.calc-block
+  max-width: 1650px
+  height: 70vh
+  padding-left: 300px
+  +r(1470)
+    padding-left: 18vw
+  +r(1282)
+    padding-left: 230px
+  +r(1140)
+    padding-left: 100px
+  +r(1023)
+    padding-left: 0
+    margin: auto
+
+
+  +r(860)
+    height: 65vh
+  +rmin(1920)
+    margin: auto
+  &__top
+    padding-top: 10vh
+    display: flex
+    justify-content: space-between
+    height: 60vh
+    +r(1023)
+      justify-content: center
+      padding-top: 3vh
+      height: 58vh
+    +r(680)
+      height: 63vh
+
+
+
+  &__top-item
+    &:last-child
+      +r(1023)
+        display: none
+    +r(1023)
+      flex-grow: 1
+      max-width: 500px
+    +r(680)
+      height: 63vh
+      margin: 5vh 10px 0 50px
+    +r(400)
+      margin: 5vh 10px 0 30px
+
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 10vh
+    +r(1023)
+      flex-direction: column
+      align-items: center
+    +r(680)
+      height: auto
+      font-size: 12px
+      margin: 0 10px
+      text-align: center
+  &__sum-block
+    width: 50%
+    +r(1023)
+      width: 500px
+      margin-top: 2vh
+    +r(680)
+      width: auto
+  &__sum-text
+    color: $main-color-darker
+    margin-bottom: 10px
+    display: block
+  &__sum-val-block
+    font-size: 22px
+    +r(680)
+      font-size: 16px
+
+
+
+
+  &__reqs
+    margin-top: 3vh
+    text-decoration: underline
+    padding: 10px 40px 10px 0
+    +psevdo
+    &:before
+      width: 10px
+      height: 10px
+      border-bottom: solid 1px #fff
+      border-left: solid 1px #fff
+      top: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      transform: rotate(45deg)
+    +r(1023)
+      display: none
+
+.calc-form
+  height: 100%
+  width: 500px
+  +r(1470)
+    width: 470px
+  +r(1282)
+    width: 320px
+  +r(1023)
+    width: 100%
+  +r(680)
+    height: 52vh
+  +flex
+  flex-direction: column
+  position: relative
+  &__item
+    max-width: 444px
+    +r(1023)
+      max-width: 100%
+  &__text
+    display: block
+    color: $main-color
+    margin-bottom: 2px
+    +r(680)
+      font-size: 12px
+      text-align: center
+  &__input-block
+    +r(680)
+      font-size: 16px!important
+
+    span
+      width: 50px
+      display: inline-block
+      text-align: center
+      margin-right: 5px
+  &__input
+    border: 0
+    border-bottom: solid 1px rgba(14,90,88,.3)
+    background: transparent
+    color: #fff
+    font-size: 20px
+    font-weight: 300
+    width: 60px
+    padding-right: 10px
+    +r(680)
+      font-size: 16px
+    &_1st
+      width: 120px
+  &__input-num
+    width: 100%
+    padding: 15px 10px
+    font-size: 16px
+    border: solid 1px $main-color
+    background: transparent
+    color: #fff
+    font-weight: 300
+    +r(680)
+      padding: 10px 5px
+      font-size: 12px
+  &__background-block
+    margin-top: 10px
+    position: relative
+    overflow-y: hidden
+    +r(680)
+      overflow-y: auto!important
+
+  &__slider
+    cursor: ew-resize
+    position: relative
+    height: 40px
+    width: 97%
+    margin: auto
+    +r(680)
+      height: 20px
+  &__min-val, &__max-val, &__zero-val
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -2px
+    color: $main-color-darker
+    font-size: 14px
+    +r(680)
+      display: none
+  &__max-val
+    text-align: right
+  &__zero-val
+    text-align: center
+  &__back1
+    position: absolute
+    +pos()
+    height: 1px
+    background: $main-color-darker
+    &:before, &:after
+      position: absolute
+      content: ''
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      height: 15px
+      border-left: solid 1px $main-color-darker
+      border-right: solid 1px $main-color-darker
+    &:after
+      width: 33%
+  &__back2
+    position: absolute
+    +pos()
+    height: 1px
+    background: $main-color-darker
+    &:before, &:after
+      position: absolute
+      content: ''
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      height: 7px
+      width: 66%
+      border-left: solid 1px $main-color-darker
+      border-right: solid 1px $main-color-darker
+    &:after
+      width: 1px
+
+.ui-slider-handle
+  top: 0
+  width: 6px
+  height: 40px
+  position: absolute
+  outline: none
+  transform: translate(-50%, 0)
+  +r(680)
+    height: 20px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    width: 450px
+    height: 3px
+    background: $main-color
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    width: 100%
+    height: 25px
+    background: $main-color
+    box-shadow: 0 0 10px $main-color
+    +r(680)
+      box-shadow: none
+
+.calc-graph
+  height: 100%
+  min-width: 640px
+  margin-right: 40px
+  +r(1470)
+    min-width: 540px
+  +r(1023)
+    display: none
+  &__graph-block
+
+
+  &__btc-val
+    padding-left: 10px
+  &__img
+    z-index: -1
+    position: absolute
+    display: block
+    width: 60%
+    height: 40%
+    top: 2vh
+    left: 15px
+    background: url("../img/call.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: bottom
+
+    &.active
+      background: url("../img/put.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+
+  &__info-block
+    height: 3vh
+  &__graph-block
+    position: relative
+    height: calc(100% - 3vh)
+  &__can-graph
+    position: absolute
+    +pos()
+    +r(1470)
+      right: 27px
+      left: -30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

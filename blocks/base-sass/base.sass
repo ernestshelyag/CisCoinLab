@@ -1,0 +1,98 @@
+$browser-context: 16 // Default
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
+
+*, *:before, *:after
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+
+*::selection
+  background: rgba($main-color-darker,.93)
+  color: #fff
+
+body, html
+  overflow: hidden
+  height: 100%
+
+html
+  -webkit-text-size-adjust: none
+  text-size-adjust: none
+  margin-right: 0!important
+
+body
+  font-family: 'Gotham', sans-serif
+  font-weight: 300
+  color: #fff
+  font-size: 16px
+  position: relative
+  min-width: 320px
+  background: #000
+
+main
+  height: 100%
+
+section
+  min-height: 100%
+  height: auto
+
+#container
+  position: absolute
+  z-index: -1
+
+.dg
+  display: none
+
+#container
+  div
+    display: none
+
+.wrp
+  +wrp
+  position: relative
+
+a
+  display: inline-block
+  outline: none
+  transition: all .3s ease-in
+  color: #fff
+  text-decoration: none
+
+p
+  line-height: 1.2
+  margin: 1em 0
+
+button
+  outline: 0
+  border: 0
+  color: #fff
+  cursor: pointer
+  font-family: 'Gotham', sans-serif
+
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="email"],
+input[type="password"],
+select,
+textarea
+  appearance: none
+  outline: 0
+  font-family: 'Gotham', sans-serif
+
++placeholder-color($main-color-darker)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

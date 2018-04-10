@@ -1,0 +1,48 @@
+mixin header()
+  +b.HEADER.header
+    .wrp
+      +e.DIV.block
+        +e.A.logo-link(href="/")
+          +e.IMG.logo-img(src="img/logo.svg")
+      +e.DIV.block
+        +e.NAV.nav
+          +e.A.link.ancor(href="#") Расчет
+          +e.A.link(href="about.html") О проекте
+          +e.A.link(href="reqs.html") Условия
+      +e.DIV.block
+        +e.A.personal(href="personal.html")
+          +e.IMG.per-img(src="img/guy.svg")
+          +e.SPAN.per-text Личный кабинет
+        +e.DIV.lang-block
+          +e.DIV.lang-btn
+            +e.SPAN.mask
+            +e.IMG.btn-img(src="img/icon8.png")
+          +e.DIV.lang-menu
+            +e.A.lang-link(href="#")
+              +e.IMG.link-img(src="img/icon8.png")
+            +e.A.lang-link(href="#")
+              +e.IMG.link-img(src="img/icon8.png")
+            +e.A.lang-link(href="#")
+              +e.IMG.link-img(src="img/icon8.png")
+            +e.A.lang-link(href="#")
+              +e.IMG.link-img(src="img/icon8.png")
+
+      +e.DIV.block.header__block_hidden
+        +e.SPAN.menu-btn Меню
+        +e.DIV.hidden-list-block
+          +e.SPAN.close-btn
+          +b.UL.hidden-list
+            +e.LI.item
+              +e.A.link(href="about.html") О проекте
+            +e.LI.item
+              +e.A.link(href="reqs.html") Условия
+            +e.LI.item
+              +e.A.link(href="personal.html") Личный кабинет
+            +e.LI.item
+              +e.A.link.js-popup-lang-modal(href="#") Язык / RU
+            +e.LI.item
+              +socials()
+            +e.LI.item
+              +b.A.mail-link(href="#")
+                +e.IMG.mail-img(src="img/mail.svg")
+                +e.SPAN.text ciscoinlab@yahoo.com

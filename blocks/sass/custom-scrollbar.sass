@@ -1,0 +1,105 @@
+.scroll-wrapper
+  overflow: hidden !important
+  padding: 0 !important
+  position: relative
+
+.scroll-content
+  overflow: scroll !important
+
+.scroll-content::-webkit-scrollbar
+  height: 0
+  width: 0
+
+.this-scroll-content
+  overflow: auto
+  height: 50vh
+
+.custom-scrollbar
+  position: absolute
+  cursor: default
+  opacity: 0
+  border: solid 1px $main-color-darker
+  border-right: 0
+
+  &:before, &:after
+    +pos()
+    content: ''
+    border-top: solid 1px $main-color-darker
+    border-bottom: solid 1px $main-color-darker
+    height: 33%
+    +r(680)
+      display: none
+  &:after
+    right: auto
+    width: 7px
+    top: 33%
+
+  div
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &.scroll-scrolly_visible
+    top: 0
+    right: 15vw
+    bottom: 0
+    display: block
+    overflow: hidden
+    width: 15px
+    height: 60vh
+    margin: auto
+    opacity: 1
+    +r(1630)
+      right: 10vw
+    +r(680)
+      width: 4px
+      right: 2vw
+      height: 65vh
+
+      //height: 80vh
+      //margin-top: 13vh
+
+  .scroll-bar
+    z-index: 10
+    width: 3px
+    background: $main-color
+    height: 10vh
+    +r(680)
+      width: 1px
+    &:before
+      position: absolute
+      top: -60vh
+      right: 0
+      width: 3px
+      height: 60vh
+      content: ""
+      background: $main-color
+      +r(680)
+        height: 80vh
+        top: -80vh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

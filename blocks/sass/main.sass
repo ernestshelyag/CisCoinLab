@@ -1,0 +1,31 @@
+
+.main
+  &__page
+    background: rgba(27,46,50,.3)
+    position: relative
+    &.active
+      opacity: 0.2
+      animation: block 1.5s forwards
+      animation-delay: 1.2s
+      background: rgba(27,46,50,.9)
+      +r(680)
+        animation-delay: .5s
+      .main__content
+        animation: block 1.5s forwards
+        animation-delay: 1.2s
+        +r(680)
+          animation-delay: .5s
+  &__content
+    opacity: 0
+    height: 83vh
+    position: relative
+    top: 10vh
+    +r(680)
+      top: 7vh
+      height: 93vh
+
+@keyframes block
+  from
+    opacity: 0.2
+  to
+    opacity: 1

@@ -1,0 +1,146 @@
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  background: $bg-color
+
+.vertical
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  background: $bg-color
+  align-items: center
+  text-align: center
+  justify-content: center
+  padding: 0 20vw
+  display: none
+  line-height: 2
+  +rh(400)
+    display: flex
+
+
+
+.action-btn-calc
+  +r(680)
+    bottom: 2vh!important
+
+.action-btn-block
+  position: absolute
+  bottom: 1vh
+  left: 0
+  right: 0
+  margin: auto
+  width: 200px
+  +tr
+  +r(680)
+    width: 150px
+    font-size: 12px
+  &:hover
+    svg
+      animation: svg 3s infinite
+  &__action-btn
+    width: 100%
+    position: relative
+  &__action-btn-text
+    +vcenter
+  svg
+    fill: $main-color-darker
+  +r(860)
+    bottom: 5vh
+  +r(680)
+    bottom: 17vh
+
+.big-num
+  +michroma
+  color: $main-color
+  font-size: 40px
+  display: block
+  text-shadow: 1px 1px 2px #000, 0 0 1em $main-color
+  +r(680)
+    font-size: 20px
+
+.back-net
+  border-left: solid 3px $main-color-darker
+  border-bottom: solid 3px $main-color-darker
+  max-height: 453px
+  +pos()
+  span
+    flex-grow: 1
+    opacity: .5
+    position: relative
+    &:before, &:after
+      position: absolute
+      content: ''
+      +pos()
+      opacity: .3
+  &__hor, &__vert
+    position: absolute
+    +pos()
+    +flex
+  &__vert
+    flex-direction: column
+    top: 10px
+    span
+      border-top: solid 1px $main-color-darker
+      position: relative
+      &:before
+        height: 1px
+        background: $main-color-darker
+      &:after
+        width: 30px
+        height: 10px
+        opacity: 1
+        right: auto
+        left: -45px
+        top: auto
+        bottom: -19px
+        content: '100'
+        color: $main-color-darker
+        text-align: right
+      &:nth-child(2)::after
+        content: '50'
+      &:nth-child(3)::after
+        content: '25'
+      &:nth-child(4)::after
+        content: '0'
+  &__hor
+    right: 10px
+    span
+      border-right: solid 1px $main-color-darker
+      &:before
+        width: 33%
+        border-right: solid 1px $main-color-darker
+        border-left: solid 1px $main-color-darker
+      &:after
+        width: 10px
+        height: 10px
+        opacity: 1
+        top: auto
+        left: auto
+        bottom: -20px
+        content: '11'
+        color: $main-color-darker
+      &:nth-child(2)::after
+        content: '22'
+      &:nth-child(3)::after
+        content: '33'
+      &:nth-child(4)::after
+        content: '44'
+
+.socials-list
+  +flex
+  width: 260px
+  svg
+    width: 22px
+    height: 22px
+    fill: #8C9698
+  &__item
+    &:hover
+      svg
+        animation: svg 3s infinite

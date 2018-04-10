@@ -1,0 +1,152 @@
+.side-menu
+  position: absolute
+  top: 0
+  bottom: 0
+  margin: auto
+  right: 80px
+  height: 45vh
+  +flex
+  flex-direction: column
+  align-items: flex-end
+
+  +r(1140)
+    height: 35vh
+  +r(1023)
+    right: 44px
+  +r(767)
+    right: 15px
+  +r(680)
+    right: 0
+    left: 0
+    height: auto
+    flex-direction: row
+    width: 60vw
+    bottom: 2vh
+    top: auto
+
+  &__item
+    +flex
+    cursor: pointer
+    align-items: center
+    padding: 20px 0
+    +psevdo
+    &:before, &:after
+      opacity: 0
+      +tr
+      top: 0
+      bottom: 0
+      right: -25px
+      margin: auto
+      +r(767)
+        right: -10px
+        width: 5px
+      +r(680)
+        display: none
+    &:before
+      width: 20px
+      border-top: solid 1px $main-color-darker
+      border-bottom: solid 1px $main-color-darker
+      border-right: solid 1px $main-color-darker
+    &:after
+      height: 1px
+      width: 7px
+      background: $main-color-darker
+      +r(767)
+        width: 3px
+
+    svg
+      fill: #fff
+      +r(680)
+        width: 30px!important
+        height: 30px!important
+
+    &:hover
+      svg
+        animation: svg 3s infinite
+      .side-menu__text
+        animation: color 3s infinite
+        opacity: .5
+    &.active
+      &:before, &:after
+        opacity: 1
+      svg
+        fill: $main-color-darker
+        animation: none
+      .side-menu__text
+        color: $main-color-darker
+        animation: none
+        opacity: 1
+        &:before, &:after
+          border-bottom: solid 1px $main-color-darker
+          border-left: solid 1px $main-color-darker
+
+
+  &__text
+    +tr
+    padding: 0 40px 0 20px
+    text-align: right
+    opacity: 0
+    +psevdo
+    &:before, &:after
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 7px
+      height: 7px
+      border-bottom: solid 1px $main-color
+      border-left: solid 1px $main-color
+    &:before
+      left: 0
+      transform: rotate(45deg)
+    &:after
+      right: 20px
+      transform: rotate(-135deg)
+      +r(1260)
+        display: none
+    +r(1260)
+      padding: 0 20px
+    +r(1140)
+      display: none
+
+.side-btn1
+  &:nth-child(1), &:nth-child(2)
+    svg
+      width: 53px
+  &:nth-child(3) svg
+    width: 44px
+
+.side-btn2
+  &:nth-child(1) svg
+    width: 35px
+  &:nth-child(2) svg
+    width: 60px
+  &:nth-child(3) svg
+    width: 50px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

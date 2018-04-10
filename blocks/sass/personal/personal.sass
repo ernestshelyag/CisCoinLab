@@ -1,0 +1,170 @@
+.pers-title
+  position: absolute
+  top: 10vh
+  left: 0
+  right: 0
+  text-align: center
+  font-size: 40px
+  color: $main-color
+  text-transform: uppercase
+  +r(1560)
+    top: 4vh
+  +r(680)
+    display: none
+
+
+.pers-box
+  +vcenter
+  &.exit
+    text-align: center
+  +r(1900)
+    padding-left: 100px
+  +r(1560)
+    padding-left: 0
+  +r(680)
+    margin-top: -6vh
+
+  &__scroll-table-block
+    height: auto!important
+    max-height: 65vh
+
+  &__exit-text
+    font-size: 20px
+    line-height: 2
+    margin-bottom: 40px
+    +r(680)
+      font-size: 14px
+      line-height: 1.5
+  &__exit-btn
+    border: solid 1px $main-color-darker
+    background: transparent
+    color: #fff
+    font-weight: 300
+    height: 50px
+    line-height: 40px
+    font-size: 18px
+    width: 200px
+    cursor: pointer
+    +tr
+    &:hover
+      border: solid 1px $main-color
+
+.pass-form
+  width: 470px
+  height: 50vh
+  margin-top: 10vh
+  +flex
+  flex-direction: column
+  +r(680)
+    width: auto
+    height: 65vh
+    padding: 0 10px
+  &__item
+    +flex
+    align-items: flex-end
+    position: relative
+  &__eye
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 5px
+    margin: auto
+    width: 30px
+    height: 20px
+    background: url("../img/eye-blink.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    cursor: pointer
+    &.active
+      background: url("../img/eye.svg")
+      background-repeat: no-repeat
+      background-size: contain
+  &__text
+    color: $main-color
+    line-height: 1.5
+    font-size: 20px
+    font-weight: 400
+    +r(680)
+      font-size: 12px
+  &__input
+    flex-grow: 1
+    max-width: 55%
+    border: none
+    background: transparent
+    border-bottom: solid 1px $main-color-darker
+    padding-bottom: 7px
+    font-size: 18px
+    color: #fff
+    font-weight: 300
+    outline: none
+    +r(680)
+      max-width: 70%
+  &__submit-block
+    padding-top: 30px
+    width: 100%
+    display: flex
+    justify-content: center
+  &__submit
+    border: solid 1px $main-color-darker
+    background: transparent
+    color: #fff
+    font-weight: 300
+    height: 50px
+    line-height: 40px
+    font-size: 18px
+    width: 80%
+    cursor: pointer
+    margin: auto
+    +tr
+    &:hover
+      border: solid 1px $main-color
+
+.pers-pagination-block
+  position: absolute
+  bottom: 10vh
+  left: 50%
+  transform: translate(-50%, 0)
+  width: 90vw
+  +flex
+  max-width: 296px
+  +r(1560)
+    width: 505px
+    max-width: 100%
+  +r(1010)
+    width: 357px
+  +r(680)
+    width: 273px
+    font-size: 12px
+
+
+  &:before, &:after
+    position: absolute
+    content: ''
+    bottom: -15px
+    left: 0
+  &:before
+    width: 100%
+    border: solid 1px $main-color-darker
+    bottom: -15px
+    left: 0
+    border-top: 0
+    height: 10px
+  &:after
+    right: 0
+    margin: auto
+    width: 1px
+    height: 5px
+    background: $main-color-darker
+  span
+    cursor: pointer
+    display: inline-block
+    margin: 0
+  +r(1560)
+    bottom: 5vh
+  +r(680)
+    bottom: 15vh
+  &__arrow, &__double-arrow
+    color: $main-color
+
+
+

@@ -1,0 +1,38 @@
+mixin lang-modal()
+    .hidden#lang-modal
+        +b.DIV.modal
+            +e.DIV.lang-menu
+                +e.A.lang-link(href="#")
+                    +e.IMG.link-img(src="img/icon8.png")
+                +e.A.lang-link(href="#")
+                    +e.IMG.link-img(src="img/icon8.png")
+                +e.A.lang-link(href="#")
+                    +e.IMG.link-img(src="img/icon8.png")
+                +e.A.lang-link(href="#")
+                    +e.IMG.link-img(src="img/icon8.png")
+
+mixin reg-modal()
+    .hidden#modal
+        +b.DIV.modal
+            +e.DIV.container
+                +e.SPAN.title
+                    | Вход в
+                    br
+                    | личный кабинет
+                +e.FORM.form
+                    +e.DIV.step
+                        +e.SPAN.help Напишите ваш e-mail и нажмите кнопку «сгенерировать пароль».
+                        +e.INPUT.input(type='email' name="modal-email" placeholder='mr.smith@gmail.com')
+                        +e.INPUT.submit(type='submit' value='сгенерировать пароль')
+                    +e.DIV.step
+                        +e.SPAN.help На ваш e-mail будет отправлен пароль. Введите его в поле «password» и нажмите на кнопку «вход», чтобы войти в личный кабинет.
+                        +e.INPUT.input.callback-input(type='password' name="modal-password" placeholder='password')
+                        +e.INPUT.submit(type='submit' value='вход')
+                        +e.SPAN.help В будущем Вы сможете сменить пароль в личном кабинете в разделе «Личные данные».
+
+mixin success-modal()
+    .hidden#success
+        .modal.success
+            | Спасибо!
+            br
+            | Вы застрахованы

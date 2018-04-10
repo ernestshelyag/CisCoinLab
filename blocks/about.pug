@@ -1,0 +1,164 @@
+extends _assets/template
+
+block title
+    title about
+
+block header
+    +b.HEADER.header
+        .wrp
+            +e.DIV.block
+                +e.A.logo-link(href="/")
+                    +e.IMG.logo-img(src="img/logo.svg")
+            +e.DIV.block
+                +e.NAV.nav
+                    +e.A.link(href="index.html") Главная
+                    +e.A.link(href="about.html") О проекте
+                    +e.A.link(href="reqs.html") Условия
+            +e.DIV.block
+                +e.A.personal(href="personal.html")
+                    +e.IMG.per-img(src="img/guy.svg")
+                    +e.SPAN.per-text Личный кабинет
+                +e.DIV.lang-block
+                    +e.DIV.lang-btn
+                        +e.SPAN.mask
+                        +e.IMG.btn-img(src="img/icon8.png")
+                    +e.DIV.lang-menu
+                        +e.A.lang-link(href="#")
+                            +e.IMG.link-img(src="img/icon8.png")
+                        +e.A.lang-link(href="#")
+                            +e.IMG.link-img(src="img/icon8.png")
+                        +e.A.lang-link(href="#")
+                            +e.IMG.link-img(src="img/icon8.png")
+                        +e.A.lang-link(href="#")
+                            +e.IMG.link-img(src="img/icon8.png")
+            +e.DIV.block.header__block_hidden
+                +e.SPAN.menu-btn Меню
+                +e.DIV.hidden-list-block
+                    +e.SPAN.close-btn
+                    +b.UL.hidden-list
+                        +e.LI.item
+                            +e.A.link(href="index.html") Главная
+                        +e.LI.item
+                            +e.A.link(href="reqs.html") Условия
+                        +e.LI.item
+                            +e.A.link(href="personal.html") Личный кабинет
+                        +e.LI.item
+                            +e.A.link.js-popup-lang-modal(href="#") Язык / RU
+                        +e.LI.item
+                            +socials()
+                        +e.LI.item
+                            +b.A.mail-link(href="#")
+                                +e.IMG.mail-img(src="img/mail.svg")
+                                +e.SPAN.text ciscoinlab@yahoo.com
+block content
+    +b.DIV.text-page
+        +e.DIV.content
+            +e.DIV.section
+                +e.H1.title О проекте
+                +b.DIV.text-block.this-scroll-content
+                    +e.P.text Вместо того чтобы обращаться к третьим лицам, например, финансово-кредитным организациям, в качестве посредников при проведении транзакций, узлы блокчейн-сети используют специальный протокол консенсуса для согласования содержимого реестра, а также криптографические алгоритмы хеширования и электронно-цифровые подписи для обеспечения целостности транзакции и передачи ее параметров.
+                    +e.P.text Механизм консенсуса гарантирует, что распределенные реестры являются точными копиями, что снижает риск появления мошеннических транзакций, поскольку постороннее вмешательство может возникнуть во многих местах одновременно. Криптографические алгоритмы хеширования, такие как алгоритм вычислений SHA256, гарантируют, что любое изменение входных данных транзакции, даже самое незначительное, приведет к появлению другого значения хеша в результатах расчетов, что указывает на вероятность компрометации входных данных транзакции. Электронно-цифровые подписи гарантируют, что транзакции осуществляются легитимными отправителями (подписаны закрытыми ключами), а не злоумышленниками.
+                    +e.P.text Децентрализованная одноранговая блокчейн-сеть лишает отдельных участников или групп участников возможности контролировать базовую инфраструктуру или дестабилизировать всю систему. Все участники сети равны и подключаются к ней по одним и тем же протоколам. Участниками могут быть физические лица, государственные структуры, организации или объединения всех перечисленных типов участников.
+                    +e.P.text По сути система записывает хронологический порядок проведения транзакций со всеми узлами сети, признавшими действительность транзакций посредством выбранной модели консенсуса. Результатом являются не подлежащие отмене транзакции, согласованные всеми участниками сети децентрализованно.
+                    +e.P.text Вместо того чтобы обращаться к третьим лицам, например, финансово-кредитным организациям, в качестве посредников при проведении транзакций, узлы блокчейн-сети используют специальный протокол консенсуса для согласования содержимого реестра, а также криптографические алгоритмы хеширования и электронно-цифровые подписи для обеспечения целостности транзакции и передачи ее параметров.
+                    +e.P.text Механизм консенсуса гарантирует, что распределенные реестры являются точными копиями, что снижает риск появления мошеннических транзакций, поскольку постороннее вмешательство может возникнуть во многих местах одновременно. Криптографические алгоритмы хеширования, такие как алгоритм вычислений SHA256, гарантируют, что любое изменение входных данных транзакции, даже самое незначительное, приведет к появлению другого значения хеша в результатах расчетов, что указывает на вероятность компрометации входных данных транзакции. Электронно-цифровые подписи гарантируют, что транзакции осуществляются легитимными отправителями (подписаны закрытыми ключами), а не злоумышленниками.
+                    +e.P.text Децентрализованная одноранговая блокчейн-сеть лишает отдельных участников или групп участников возможности контролировать базовую инфраструктуру или дестабилизировать всю систему. Все участники сети равны и подключаются к ней по одним и тем же протоколам. Участниками могут быть физические лица, государственные структуры, организации или объединения всех перечисленных типов участников.
+                    +e.P.text По сути система записывает хронологический порядок проведения
+    .custom-scrollbar
+        .scroll-element_outerw
+            .scroll-element_size
+            .scroll-element_track
+            .scroll-bar
+
+block modal
+    +lang-modal()
+    +reg-modal()
+
+block script
+    script.
+        var container;
+        var camera, scene, renderer, group, particle;
+        var mouseX = 0, mouseY = 0;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+        if ($(window).width() > 1337) {
+            init();
+            animate();
+        };
+
+        function init() {
+            container = document.createElement('div');
+            document.body.appendChild(container);
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
+            camera.position.z = 1000;
+            scene = new THREE.Scene();
+            var pic = new Image();
+            pic.src  = 'img/num0.png';
+            var pic2 = new Image();
+            pic2.src = 'img/num1.png';
+            var program = function (context) {
+                context.beginPath();
+                context.drawImage(pic, 0, 0, 1, 1);};
+            var program2 = function (context) {
+                context.beginPath();
+                context.drawImage(pic2, 0, 0, 1, 1);};
+            group = new THREE.Group();
+            scene.add(group);
+            for (var i = 0; i < 300; i++) {
+                var material = new THREE.SpriteCanvasMaterial({
+                    program: program});
+                particle = new THREE.Sprite(material);
+                particle.position.x = Math.random() * 2000 - 1000;
+                particle.position.y = Math.random() * 2000 - 1000;
+                particle.position.z = Math.random() * 2000 - 1000;
+                particle.scale.x = particle.scale.y = Math.random() * 20 + 10;
+                group.add(particle);}
+            for (var j = 0; j < 300; j++) {
+                var material2 = new THREE.SpriteCanvasMaterial({
+                    program: program2});
+                particle2 = new THREE.Sprite(material2);
+                particle2.position.x = Math.random() * 2000 - 1000;
+                particle2.position.y = Math.random() * 2000 - 1000;
+                particle2.position.z = Math.random() * 2000 - 1000;
+                particle2.scale.x = particle2.scale.y = Math.random() * 20 + 10;
+                group.add(particle2);}
+            renderer = new THREE.CanvasRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            document.addEventListener('touchstart', onDocumentTouchStart, false);
+            document.addEventListener('touchmove', onDocumentTouchMove, false);
+            window.addEventListener('resize', onWindowResize, false);}
+        function onWindowResize() {
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);}
+
+
+        function onDocumentMouseMove(event) {
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;}
+        function onDocumentTouchStart(event) {
+            if (event.touches.length === 1) {
+                event.preventDefault();
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;}}
+        function onDocumentTouchMove(event) {
+            if (event.touches.length === 1) {
+                event.preventDefault();
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;}}
+
+
+        function animate() {
+            requestAnimationFrame(animate);
+            render();}
+        function render() {
+            camera.position.x += ( mouseX - camera.position.x ) * 0.005;
+            camera.position.y += ( -mouseY - camera.position.y ) * 0.005;
+            camera.lookAt(scene.position);
+            renderer.render(scene, camera);}

@@ -1,0 +1,100 @@
+include bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include ../mixins
+
+doctype html
+html(lang="ru")
+
+  head
+
+    meta(charset="utf-8")
+
+    meta(content="" name="author")
+    meta(content="" name="description")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="HandheldFriendly" content="true")
+    meta(name="format-detection", content="telephone=no")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+
+    //link(rel="shortcut icon", href="img/favicon/favicon.png", type="image/x-icon")
+    //link(rel="apple-touch-icon", href="img/favicon/apple-touch-icon.png")
+    //link(rel="apple-touch-icon", sizes="72x72", href="img/favicon/apple-touch-icon-72x72.png")
+    //link(rel="apple-touch-icon", sizes="114x114", href="img/favicon/apple-touch-icon-114x114.png")
+    //link(rel="apple-touch-icon", sizes="144x144", href="img/favicon/apple-touch-icon-144x144.png")
+    //link(rel="apple-touch-icon", sizes="152x152", href="img/favicon/apple-touch-icon-152x152.png")
+    //link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon-180x180.png")
+
+    link(href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet")
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    script(src="js/html5shiv.js")
+    script(src="js/selectivizr-min.js")
+    <![endif]-->
+
+    block vendors-css
+
+    // build:css css/vendor.css
+    link(rel="stylesheet" href="libs/magnific-popup.css")
+    // endbuild
+
+    // build:css css/main.css
+    link(rel="stylesheet", href="css/styles.css")
+    // endbuild
+
+    block title
+
+    //meta(property='og:title', content='контент для микроразметки: заголовок')
+    //meta(property='og:description', content='контент для микроразметки: содержание (текст)')
+    //meta(property='og:image', content='http://prospekt-taxi.ru/img/car-2.png')
+    //meta(property='og:url', content='http://prospekt-taxi.ru/')
+
+    script(src="libs/modernizr.js")
+
+  block body
+    body
+
+      <!--[if lt IE 8]>
+      p(style="padding: 20px;")
+        | Вы используете старую версию браузера.
+        | Пожалуйста
+        a(href='http://browsehappy.com/', style="padding: 0 5px; font-weight: bold; text-transform: uppercase; color: blue;") обновите ваш браузер
+        | перейдя по ссылке.
+      <![endif]-->
+
+      span.preloader
+      span.vertical Пожалуйста разверните устройство вертикально
+
+      block header
+        +header()
+      block content
+      block footer
+        +footer()
+
+      block modal
+        +lang-modal()
+        +reg-modal()
+        +success-modal()
+
+      block vendors-js
+
+        // build:js js/vendor.js
+        script( src="libs/jquery.min.js")
+        script( src="libs/three.min.js")
+        script( src="libs/dat.gui.min.js")
+        script( src="libs/Projector.js")
+        script( src="libs/CanvasRenderer.js")
+        script( src="libs/jquery-ui.min.js")
+        script( src="libs/jquery.ui.touch-punch.min.js")
+        script( src="libs/jquery.scrollbar.min.js")
+        script( src="libs/jquery.magnific-popup.min.js")
+        // endbuild
+
+      block main-js
+
+        // build:js js/main.js
+        script( src="js/main.js")
+        // endbuild
+
+      block script

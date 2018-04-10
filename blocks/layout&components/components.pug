@@ -1,0 +1,100 @@
+mixin table-item()
+    +e.DIV.row
+        +e.DIV.cell
+            +e.SPAN.name-hidden №
+            +e.SPAN.val1 524
+        +e.DIV.cell
+            +e.SPAN.name-hidden Сумма страховки
+            +e.SPAN.val2 1234567
+            br
+            span BTC
+        +e.DIV.cell
+            +e.SPAN.name-hidden Срок (дней)
+            +e.SPAN.val3 27
+        +e.DIV.cell
+            +e.SPAN.name-hidden Глубина изменения
+            +e.SPAN.val4 45
+            span &#160%
+        +e.DIV.cell
+            +e.SPAN.name-hidden Курс
+            +e.SPAN.val5 1234567
+            span &#160$
+        +e.DIV.cell
+            +e.SPAN.name-hidden Сумма компенсации
+            +e.SPAN.val6 12345678910
+            br
+            span &#160BTC
+        +e.DIV.cell
+            +e.SPAN.name-hidden Стоимость страховки
+            +e.SPAN.val7 12345678910
+            br
+            span &#160BTC
+        +e.DIV.cell
+            +e.SPAN.name-hidden Статус заявки
+            +e.SPAN.val8 Не оплачено
+        +e.DIV.cell.table__cell_num
+            +e.SPAN.name-hidden Номер кошелька
+            +e.SPAN.val9 1Pwj8Up4CWCcFpvGLKhLL5UWjtTsWQF27q
+        +e.DIV.cell.table__cell_btn
+            +e.SPAN.name-hidden Действие
+            +e.BUTTON.val10.js-popup-success Оплатить
+
+mixin table()
+    +b.DIV.table
+        +e.DIV.row.table__row_header
+            +e.DIV.cell №
+            +e.DIV.cell
+                | Сумма
+                br
+                | страховки
+            +e.DIV.cell
+                | Срок
+                br
+                | (дней)
+            +e.DIV.cell
+                | Глубина
+                br
+                | изменения
+            +e.DIV.cell Курс
+            +e.DIV.cell
+                | Сумма
+                br
+                | компенсации
+            +e.DIV.cell
+                | Стоимость
+                br
+                | страховки
+            +e.DIV.cell
+                | Статус
+                br
+                | заявки
+            +e.DIV.cell Номер кошелька
+            +e.DIV.cell Действия
+        +table-item()
+        +table-item()
+        +table-item()
+        +table-item()
+
+mixin socials()
+    +b.UL.socials-list
+        +e.LI.item
+            +e.A.link(href="#")
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 36.9 33.5', style='enable-background:new 0 0 36.9 33.5;', xml:space='preserve')
+                    rect(x='0.9', y='10.8', width='7.2', height='22.8')
+                    path(d='M27.8,10.5c-4.1,0-6.7,2.2-7.2,3.8v-3.6h-8.1c0.1,1.9,0,22.8,0,22.8h8.1V21.2c0-0.7,0-1.4,0.2-1.9 c0.6-1.4,1.7-2.8,3.9-2.8c2.8,0,4.1,2.1,4.1,5.2v11.8h8.2V20.9C36.9,13.8,32.9,10.5,27.8,10.5z')
+                    path(d='M4.4,0C1.7,0,0,1.7,0,4c0,2.2,1.7,3.9,4.3,3.9h0.1c2.7,0,4.4-1.7,4.4-4C8.7,1.7,7,0,4.4,0z')
+        +e.LI.item
+            +e.A.link(href="#")
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 37.5 31.2', style='enable-background:new 0 0 37.5 31.2;', xml:space='preserve')
+                    path(d='M36.4,0.6c-1.5,0.9-3.1,1.6-4.9,1.9C30.1,1,28.1,0,25.9,0c-4.2,0-7.7,3.5-7.7,7.9 c0,0.6,0.1,1.2,0.2,1.8c-6.4-0.3-12-3.5-15.8-8.2c-0.7,1.2-1,2.5-1,4c0,2.7,1.4,5.1,3.4,6.6c-1.3,0-2.4-0.4-3.5-1v0.1 c0,3.8,2.6,7,6.2,7.7c-0.6,0.2-1.3,0.3-2,0.3c-0.5,0-1,0-1.4-0.1c1,3.1,3.8,5.4,7.2,5.5c-2.6,2.1-5.9,3.4-9.5,3.4 c-0.6,0-1.2,0-1.8-0.1c3.4,2.2,7.4,3.5,11.8,3.5c14.1,0,21.9-12,21.9-22.4c0-0.3,0-0.7,0-1c1.5-1.1,2.8-2.5,3.8-4.1 c-1.4,0.6-2.9,1.1-4.4,1.2C34.6,4,35.8,2.4,36.4,0.6z')
+
+        +e.LI.item
+            +e.A.link(href="#")
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 36.7 36.7', style='enable-background:new 0 0 36.7 36.7;', xml:space='preserve')
+                    path(d='M32.3,0H4.4C2,0,0,1.9,0,4.3v28c0,2.4,2,4.3,4.4,4.3h27.9c2.4,0,4.4-1.9,4.4-4.3v-28 C36.7,1.9,34.7,0,32.3,0z M26.4,5.7c0-0.6,0.5-1.1,1.1-1.1h3.4c0.6,0,1.1,0.5,1.1,1.1v3.4c0,0.6-0.5,1.1-1.1,1.1h-3.4 c-0.6,0-1.1-0.5-1.1-1.1V5.7z M18.4,11.3c3.9,0,7.1,3.1,7.1,7c0,3.9-3.2,7-7.1,7c-3.9,0-7-3.1-7-7C11.3,14.5,14.5,11.3,18.4,11.3z M33.2,32.1c0,0.6-0.5,1.1-1.1,1.1H4.6c-0.6,0-1.1-0.5-1.1-1.1V14.9H8c-0.6,0.9-0.8,2.5-0.8,3.5c0,6.1,5,11.1,11.2,11.1 c6.2,0,11.2-5,11.2-11.1c0-1-0.1-2.6-0.9-3.5h4.6V32.1z')
+        +e.LI.item
+            +e.A.link(href="#")
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 36.7 31.3', style='enable-background:new 0 0 36.7 31.3;', xml:space='preserve')
+                    path(d='M31.3,0c-5.1-0.2-8.5,2.7-10.4,8.5c0.9-0.4,1.8-0.6,2.7-0.6c1.9,0,2.7,1,2.5,3.1 c-0.1,1.3-0.9,3.1-2.5,5.5C22.1,18.8,21,20,20.2,20c-1,0-1.9-1.8-2.7-5.5c-0.3-1.1-0.8-3.8-1.5-8.3c-0.7-4.1-2.4-6-5.3-5.8 c-1.2,0.1-3,1.2-5.4,3.3C3.6,5.2,1.8,6.8,0,8.4l1.7,2.2c1.6-1.1,2.6-1.7,2.9-1.7c1.3,0,2.4,2,3.5,5.9c1,3.6,2,7.2,3,10.7 c1.5,3.9,3.3,5.8,5.4,5.8c3.5,0,7.7-3.2,12.7-9.6c4.8-6.1,7.3-10.9,7.5-14.5C36.9,2.5,35.1,0.1,31.3,0z')
+
+
